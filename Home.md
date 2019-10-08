@@ -5,8 +5,8 @@ Lightning Web Runtime is an LWC-first application framework designed for speed a
 LWR at its simplest is an opinionated way to build a SPA (Single Page App) using LWC. Some benefits of LWR right out of the box are:
 
 1. Performance. Our bar is set at sub-second full page loads.
-2. Ability to test your application locally with live data from Salesforce
-3. Something
+2. Enjoyable local development experience
+3. All the power of LWC and the Salesforce platform at your disposal
 
 ## Lightning Web Runtime at Salesforce
 
