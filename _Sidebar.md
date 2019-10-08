@@ -10,4 +10,4 @@ For information on how to setup your environment for internal access, see these 
 - [Configure Core](https://git.soma.salesforce.com/communities/webruntime/wiki/Configure-Core)
 - [Checking into Core](https://git.soma.salesforce.com/communities/webruntime/wiki/Checking-into-Core)
 
-🏖 have fun 🐬  
+🌈 have fun 🌊
