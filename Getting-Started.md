@@ -176,7 +176,7 @@ export default class Home extends LightningElement {
 
 ```css
 h1 {
-	color: var(--color-header)
+  color: var(--color-header)
 }
 ```
 
