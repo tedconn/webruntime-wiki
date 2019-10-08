@@ -6,4 +6,5 @@ LWR at its simplest is an opinionated way to build a SPA (Single Page App) using
 2. Something
 3. Something
 
-Enough talk. Let's build your first app!
+## Lightning Web Runtime at Salesforce
+
