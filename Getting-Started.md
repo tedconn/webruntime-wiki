@@ -48,13 +48,7 @@ Inside `src` we will first define our routes. Create a `routes.json` file like t
     "view": "home",
     "isRoot": true,
     "isDefault": true
-  },
-  {
-    "id": "contact",
-    "name": "contact",
-    "path": "/contact",
-    "view": "contact"
-  },
+  }
 ]
 ```
 
@@ -81,3 +75,157 @@ A theme layouts is a view which typically defines a header and a footer, plus a 
     }
 }
 ```
+
+### branding.json
+
+Let's create a file with a single branding property:
+
+```json
+[
+    {
+        "name": "HeaderColor",
+        "tokens": ["--color-header"],
+        "value": "#FF5A00"
+    }
+]
+```
+
+Run `yarn start` and see the following console output:
+
+```console
+Error: indexHtml does not exist: ./src/index.html
+```
+
+### index.html
+
+Your app will obviously need a html document of some sort, so let's create an `index.html` since that's the default:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>My first LWR app!</title>
+    {{ webruntimeInit }}
+    {{ webruntimeViews }}
+</head>
+
+<body id="main">
+    {{ webruntimeApp "main" }}
+</body>
+
+</html>
+```
+
+Don't worry about the semantics yet - that's the first thing we'll discuss after we get our app up and running!
+
+### Views
+
+Previously we made reference to some views in our routes and our theme layout. **`home`**, **`contact`** and **`headerAndFooter`** For now, we can think of views as pages and all pages need to point to a UI component. Let's create the views in `src/views`:
+
+**views/home.json** 
+
+```json
+{
+    "name": "home",
+    "component": {
+        "name": "app/home"
+    },
+    "themeLayoutType": "default"
+}
+```
+
+In our home view, we will point to the home component and use the default theme layout we defined in `theme.json`.
+
+**views/headerAndFooter.json** 
+
+```json
+{
+    "name": "defaultThemeLayout",
+    "component": {
+        "name": "app/headerAndFooter"
+    }
+}
+```
+
+Notice that a theme layout view also points to a component except it does not need a `themeLayoutType` because it _is_ a theme layout.
+
+### Components
+
+Our final step is to create the LWC components that power our application. These components are usually placed in `src/modules` so we will do the same!
+
+**src/modules/app/home/home.html**
+
+```html
+<template>
+  <h1>My first LWR app!</h1>
+</template>
+```
+
+**src/modules/app/home/home.js**
+
+```js
+import { LightningElement } from 'lwc';
+
+export default class Home extends LightningElement {
+
+}
+```
+
+**src/modules/app/home/home.css**
+
+```css
+h1 {
+	color: var(--color-header)
+}
+```
+
+That's our home component and now we make our theme layout component:
+
+**src/modules/app/headerAndFooter/headerAndFooter.html**
+
+```html
+<template>
+  <header></header>
+  <main>
+    <slot></slot>
+  </main>
+  <footer></footer>
+</template>
+```
+
+Don't worry about populating the header or footer just yet, but the slot is important, because this is where your view will swap your content when you route from view to view.
+
+**src/modules/app/headerAndFooter/headerAndFooter.js**
+
+```js
+import { LightningElement } from 'lwc';
+
+export default class HeaderAndFooter extends LightningElement {
+
+}
+```
+
+Ok it looks like we're all set! Our file structure should now look like this:
+
+
+
+Let's run `yarn start` again and this time we should see something like the following:
+
+```console
+Template version key cdaa45cad1
+Server up on http://localhost:3000
+```
+
+Let's open `http://localhost:3000` in our browser and we should see:
+
+
+
+Beautiful! Let's recap what we did:
+
+1. Created a new project and installed the LWR CLI.
+2. Gave our app a `start` command that invokes the LWR CLI to start our app.
+3. We created a home route, an associated view and an associated LWC component.
+4. We created a theme with a single branding property and a theme layout.
+
+Congratulations! [In the next section](routing-and-layouts) we'll go over theme layouts in a little more detail and we'll add some more functionality to our app.
