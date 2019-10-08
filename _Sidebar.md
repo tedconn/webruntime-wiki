@@ -1,6 +1,6 @@
 To get started using Lightning Web Runtime:
 
-👉[Getting Started](https://git.soma.salesforce.com/communities/webruntime/wiki/Getting-Started) 
+👉[Getting Started](https://git.soma.salesforce.com/communities/webruntime/wiki/Getting-Started-Part-1:-The-Basics) 
 
 For information on how to setup your environment for internal access, see these links:
 
