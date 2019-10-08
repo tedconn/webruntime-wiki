@@ -2,3 +2,4 @@ For information on how to setup your environment for internal access, see these 
 
 - [Internal NPM Access](https://git.soma.salesforce.com/communities/webruntime/wiki/Internal-NPM-Access)
 - [Github Enterprise](https://git.soma.salesforce.com/communities/webruntime/wiki/Github-Enterprise)
+- [SFCI / Jenkins](https://git.soma.salesforce.com/communities/webruntime/wiki/SFCI---Jenkins)
