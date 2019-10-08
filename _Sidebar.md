@@ -1,1 +1,1 @@
-Blah Blah
+For information on how to setup your environment for internal access, see these links:
