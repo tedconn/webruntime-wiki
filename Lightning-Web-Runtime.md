@@ -12,9 +12,9 @@ LWR was first built as a Community runtime replacement for Aura. Communities are
 
 ### Timeline
 
-LWR is currently an official open source project. It is used by the Lightning Tooling team in their [LWC Local Development](https://developer.salesforce.com/blogs/2019/10/announcing-lwc-local-development-beta.html) project (Beta).
-
-Communities is releasing a new LWR app in the form of a new Build-Your-Own Community. This community is customer pilot in 222 and is expected to go GA in 226.
+- LWR is currently an official open source project. It is used by the Lightning Tooling team in their [LWC Local Development](https://developer.salesforce.com/blogs/2019/10/announcing-lwc-local-development-beta.html) project (Beta).
+- Communities is releasing a new LWR app in the form of a new Build-Your-Own Community. This community is customer pilot in 222 and is expected to go GA in 226.
+- We plan to announce LWR at TrailheadDX '20.
 
 ### Development Experience
 
