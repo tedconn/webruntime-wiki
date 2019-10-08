@@ -208,7 +208,7 @@ export default class HeaderAndFooter extends LightningElement {
 
 Ok it looks like we're all set! Our file structure should now look like this:
 
-
+[[https://git.soma.salesforce.com/communities/webruntime/blob/master/docs/img/file-structure.png|alt=file structure]]
 
 Let's run `yarn start` again and this time we should see something like the following:
 
@@ -219,7 +219,7 @@ Server up on http://localhost:3000
 
 Let's open `http://localhost:3000` in our browser and we should see:
 
-
+[[https://git.soma.salesforce.com/communities/webruntime/blob/master/docs/img/first-lwr-message.png|alt=first lwr message]]
 
 Beautiful! Let's recap what we did:
 
