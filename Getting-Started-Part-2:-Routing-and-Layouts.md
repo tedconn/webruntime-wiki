@@ -94,7 +94,7 @@ Note: for simple use cases like these, you might think "Why do I need a view, wh
   "name": "contact",
   "component": {
     "name": "app/contact"
-  }
+  },
   "themeLayoutType": "default"
 }
 ```
