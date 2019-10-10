@@ -14,9 +14,7 @@ Off-core Apex will only work when [API calls are proxied to a core community ins
 
 ## @salesforce/client
 
-`@salesforce/client` is meant to provide information about your client environment. This module currently only returns `formFactor` which will always be `large` until we support mobile. The underlying implementation is read from he `configProvider`.
-
-The [server runtime](../packages/@webruntime/compiler/src/server/server.js) will read the static resource files from the `${outputDir}/public/assets` directory.
+`@salesforce/client` is meant to provide information about your client environment. This module currently only returns `formFactor` which will always be `large` until we support mobile. The underlying implementation is read from the `configProvider`.
 
 ## @salesforce/contentAssetUrl
 
