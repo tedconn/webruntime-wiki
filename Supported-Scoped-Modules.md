@@ -12,6 +12,12 @@ In Lightning Web Runtime, `@salesforce/apex` imports will add a `force/lds` depe
 
 Off-core Apex will only work when [API calls are proxied to a core community instance.](https://git.soma.salesforce.com/communities/talon/blob/master/docs/WorkingWithSalesforceData.md#proxy-api-calls-to-a-running-core-talon-community-instance)
 
+## @salesforce/client
+
+`@salesforce/client` is meant to provide information about your client environment. This module currently only returns `formFactor` which will always be `large` until we support mobile. The underlying implementation is read from he `configProvider`.
+
+The [server runtime](../packages/@webruntime/compiler/src/server/server.js) will read the static resource files from the `${outputDir}/public/assets` directory.
+
 ## @salesforce/contentAssetUrl
 
 `@salesforce/contentAssetUrl` brings access to the URLs of asset files (See [ContentAsset object](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contentasset.htm)) by their asset names.
