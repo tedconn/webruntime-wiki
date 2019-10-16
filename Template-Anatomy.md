@@ -170,4 +170,4 @@ module.exports = myCustomRollupPlugin;
 
 The name of the metadata schema config to validate the template against.
 
-For the available options, see the [configs in @webruntime/metadata-schema](https://git.soma.salesforce.com/communities/webruntime/tree/master/packages/%40webruntime/metadata-schema/config).
+For the available options, see the [configs](https://git.soma.salesforce.com/communities/webruntime/tree/master/packages/%40webruntime/metadata-schema/config) in @webruntime/metadata-schema. Each YAML config file specifies a list of metadata schemas to include during the validation step.
