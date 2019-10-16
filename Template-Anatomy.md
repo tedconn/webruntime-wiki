@@ -98,7 +98,8 @@ Here is an example of a `webruntime.config.json` file, see below for the descrip
             }
         },
         "plugins": ["resolveable/CustomRollupPlugin"]
-    }
+    },
+    "schema": "base"
 }
 ```
 
@@ -164,3 +165,9 @@ function myCustomRollupPlugin(/* no arguments are passed in */) {
 
 module.exports = myCustomRollupPlugin;
 ```
+
+### schema
+
+The name of the metadata schema config to validate the template against.
+
+For the available options, see the [configs in @webruntime/metadata-schema](https://git.soma.salesforce.com/communities/webruntime/tree/master/packages/%40webruntime/metadata-schema/config).
