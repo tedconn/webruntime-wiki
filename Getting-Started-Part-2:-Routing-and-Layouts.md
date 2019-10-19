@@ -143,18 +143,20 @@ The last thing we have to do is -- you guessed it -- wire up our navigation menu
 </template>
 ```
 
-Fantastic! If you look at your page you will notice that you can click back and forth between Contact and Home. [What happened to my styling?](#under-construction)
+Fantastic! If you look at your page you will notice that you can click back and forth between Contact and Home. [What happened to my link styling?](#lightning-web-runtime-is-still-in-alpha)
 
-### Under Construction
+----
 
-At the time of writing of this page there are a couple things being sorted out:
+In the next section, we'll expand on some of the concepts above: [Getting Started 2.1: SPA Basics and Programmatic Routing]()
+
+----
+
+### Lightning Web Runtime is still in Alpha
+
+At the time of writing of this page there are a couple of basic things being sorted out:
 
 1. `<universal_container-router-link>` is a temporary name which will change to something like `<lwr-link>` very shortly. Please follow [this issue](https://git.soma.salesforce.com/communities/webruntime/issues/933).
-2. My styling sucks 
 
-
-
-
-
-
-
+2. **The styles I defined in my header for my `<a>` tag are gone!** Web Components provide native shadow DOM encapsulation. This means that I cannot style an LWC UI module from outside. In our example above we are targeting the `a` element inside `universal_container-router-link` using the `li a` and `li a:hover` selectors from the parent UI module's CSS (header.css). This worked when we had a simple `<a>` in header's markup, but once it became a part of its own UI module, it now belongs to a new shadow root and cannot be styled in the same way.  
+This is expected since Web Components give us natural encapsulation via Shadow DOM. It's purposefully difficult to style components from other namespaces. This prevents global styles from leaking into your components or from other components to be able to modify your internal look and feel.  
+The answer is for the `<universal_container-router-link>` component to expose some CSS variables we can modify that will allow us to style only the parts of the component the component owner allows. [Issue #933](https://git.soma.salesforce.com/communities/webruntime/issues/933) covers this work in progress as well.
