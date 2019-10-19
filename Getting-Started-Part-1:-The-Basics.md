@@ -228,4 +228,10 @@ Beautiful! Let's recap what we did:
 3. We created a home route, an associated view and an associated LWC component.
 4. We created a theme with a single branding property and a theme layout.
 
-Congratulations! [In the next section](https://git.soma.salesforce.com/communities/webruntime/wiki/Getting-Started-Part-2:-Routing-and-Layouts) we'll go over theme layouts in a little more detail and we'll add some more functionality to our app.
+Congratulations! 
+
+----
+
+In [Getting Started Part 2](https://git.soma.salesforce.com/communities/webruntime/wiki/Getting-Started-Part-2:-Routing-and-Layouts) we'll go over theme layouts in a little more detail and we'll add some more functionality to our app.
+
+----
