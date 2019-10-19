@@ -1,5 +1,3 @@
-🛠 Under Construction 🛠 
-
 In the previous step we created a theme layout with a default slot. Let's add a header with a quick navigation bar to our new app. This will help demonstrate how theme layouts work. Also - there is no need to restart your server when working on LWR, it runs automatically in watch mode. 
 
 **src/modules/app/header/header.html**
@@ -55,14 +53,14 @@ li a:hover {
 }
 ```
 
-Ok, that will give us a decent looking navigation bar in our header. If we go back to our browser and refresh, you will notice that nothing has changed. That is because we didn't add the header component to our markup yet. Let's add it to our lonely theme layout:
+Ok, that will give us a decent looking navigation bar in our header. If we go back to our browser and refresh, you will notice that nothing has changed. That is because we didn't add the header UI module to our markup yet. Let's add it to our lonely theme layout:
 
 **src/modules/app/headerAndFooter/headerAndFooter.html**
 
 ```html
 <template>
   <header>
-    <!-- this is our new component -->
+    <!-- this is our new ui module -->
     <app-header></app-header>
   </header>
   <main>
@@ -72,7 +70,7 @@ Ok, that will give us a decent looking navigation bar in our header. If we go ba
 </template>
 ```
 
-Save and refresh your browser - our header appears at the top. Ok great, now let's make the header actually functional. In order to demonstrate routing and theme layouts, let's add the following route to our `routes.json`,  so the contact link actually works.
+Take a look at your changes and you should see our header appearing at the top. Ok great, now let's make the header actually functional. In order to demonstrate routing and theme layouts, let's add the following route to our `routes.json`,  so the contact link actually works.
 
 ```json
 {
@@ -83,9 +81,11 @@ Save and refresh your browser - our header appears at the top. Ok great, now let
 }
 ```
 
-We're also going to need a contact view and component.
+We're also going to need a contact view and corresponding UI module.
 
-Note: for simple use cases like these, you might think "Why do I need a view, why not just route directly to a component?" And you would be right. We don't currently support basic component routing, but we plan on adding it back and we will dig deeper into the use cases for actually having a view later on. 
+> For simple use cases like these, you might think "Why do I need a view, why not just route directly to a ui module?" **And you would be right**. We tend to refer to this as "component routing" and we don't currently support it. It is currently being worked on however, so stay tuned!
+
+Create your contact view:
 
 **src/views/contact.json**
 
@@ -99,9 +99,11 @@ Note: for simple use cases like these, you might think "Why do I need a view, wh
 }
 ```
 
-We want our new contact page to use the app-contact component which we are about to create and we want to set the `themeLayoutType` to our only theme layout so that it will also have the header.
+We want our new contact page to use the `app/contact` component which we are about to create and we want to set the `themeLayoutType` to our only theme layout so that it will also have the same header.
 
-Let's create the contact component:
+> **Module Namespaces:** When we see a reference to a module like `app/contact` we say that the part before the `/` is the namespace and the part after is the module name. In this case `app` is the module namespace and `contact` is the module name. LWC encourages namespacing by default so as not to pollute the global namespace.
+
+Let's create the contact module:
 
 **src/modules/app/contact/contact.html**
 
@@ -125,6 +127,31 @@ export default class Contact extends LightningElement {
 The last thing we have to do is -- you guessed it -- wire up our navigation menu. LWR provides a link component you can use in your application for basic routing. Let's change our header markup to use that:
 
 **src/modules/app/headr/header.html**
+
+```html
+<template>
+  <nav>
+    <ul>
+      <li>
+        <universal_container-router-link href="/">Home</universal_container-router-link>
+      </li>
+      <li>
+        <universal_container-router-link href="/contact">Contact</universal_container-router-link>
+      </li>
+    </ul>
+ </nav>
+</template>
+```
+
+Fantastic! If you look at your page you will notice that you can click back and forth between Contact and Home. [What happened to my styling?](#under-construction)
+
+### Under Construction
+
+At the time of writing of this page there are a couple things being sorted out:
+
+1. `<universal_container-router-link>` is a temporary name which will change to something like `<lwr-link>` very shortly. Please follow [this issue](https://git.soma.salesforce.com/communities/webruntime/issues/933).
+2. My styling sucks 
+
 
 
 
