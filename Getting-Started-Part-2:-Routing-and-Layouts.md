@@ -147,7 +147,7 @@ Fantastic! If you look at your page you will notice that you can click back and 
 
 ----
 
-In the next section, we'll expand on some of the concepts above: [Getting Started 2.1: SPA Basics and Programmatic Routing]()
+In the next section, we'll expand on some of the concepts above: [Getting Started Part 3: SPA Basics and Programmatic Routing](https://git.soma.salesforce.com/communities/webruntime/wiki/Getting-Started-Part-3:-SPA-Basics-and-Programmatic-Routing)
 
 ----
 
