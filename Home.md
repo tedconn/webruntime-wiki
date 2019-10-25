@@ -2,7 +2,7 @@
 
 Lightning Web Runtime is an LWC-first application framework designed for speed and customizability. LWR is built and maintained by Communities and the UI Platform. LWR is formerly known as Talon and Universal Container.
 
-LWR at its simplest is an opinionated way to build a SPA (Single Page App) using LWC. Some benefits of LWR right out of the box are:
+LWR at its simplest is a non-opinionated way to build a SPA (Single Page App) using LWC. Some benefits of LWR right out of the box are:
 
 1. Performance. Our bar is set at sub-second full page loads.
 2. Enjoyable local development experience
