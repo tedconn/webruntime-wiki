@@ -77,7 +77,7 @@ Take a look at your changes and you should see our header appearing at the top. 
   "id": "contact",
   "name": "contact",
   "path": "/contact",
-  "view": "view"
+  "view": "contact"
 }
 ```
 
