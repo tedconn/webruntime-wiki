@@ -35,4 +35,4 @@ If you're looking for an enjoyable development experience then LWR is right for 
 2. LWR has 3 server runtime implementations: Core, Scone and Node.js. The only one to be deployed to production today is Core. Talk to us about your deployment, we can help.
 3. LWR is still very new so if you can't hack us, [join us](Contributing.md)!
 
-If this sounds right for you [let's get started building your first LWR app](getting-started)! (estimated time, 15 minutes!)
+If this sounds right for you [let's get started building your first LWR app](https://git.soma.salesforce.com/communities/webruntime/wiki/Getting-Started-Part-1:-The-Basics)! (estimated time, 15 minutes!)
