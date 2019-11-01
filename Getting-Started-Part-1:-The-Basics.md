@@ -11,7 +11,7 @@ user@sfdc:~/my-app$ yarn add --dev @webruntime/cli
 Let's also edit our package.json to add a start script to our application:
 
 ```json
-scripts: {
+"scripts": {
   "start": "webruntime run"
 }
 ```
