@@ -15,7 +15,7 @@ The end result should be a `workspace-user.xml` file that looks a bit like this:
             <repository.system.validation>DISABLED</repository.system.validation>
             <modularity.enforcer.disabled>true</modularity.enforcer.disabled>
             <skipJsDoc>true</skipJsDoc>
-            <talon-runtime.version>224-SNAPSHOT</talon-runtime.version>
+            <webruntime-framework.version>224-SNAPSHOT</webruntime-framework.version>
         </properties>
     </workspace>
 ```
@@ -38,13 +38,13 @@ The end result should be a `workspace-user.xml` file that looks a bit like this:
             <skipJsDoc>true</skipJsDoc>
         </properties>
     ```
-1. Add a `<talon-runtime.version>` entry under the `<properties>` node from Step 3. Update the `224-SNAPSHOT` value to match the version listed at the top of this modules's [POM file](../pom.xml). It will be between the `<version> ... </version>` tags. This tells Core to use the version in our local repository rather than download a JAR.
+1. Add a `<webruntime-framework.version>` entry under the `<properties>` node from Step 3. Update the `224-SNAPSHOT` value to match the version listed at the top of this modules's [POM file](../pom.xml). It will be between the `<version> ... </version>` tags. This tells Core to use the version in our local repository rather than download a JAR.
     ```xml
         <properties>
             <repository.system.validation>DISABLED</repository.system.validation>
             <modularity.enforcer.disabled>true</modularity.enforcer.disabled>
             <skipJsDoc>true</skipJsDoc>
-            <talon-runtime.version>224-SNAPSHOT</talon-runtime.version>
+            <webruntime-framework.version>224-SNAPSHOT</webruntime-framework.version>
         </properties>
     ```
     > **Important**: When you want to consume artifacts from Core comment out all of these changes. You don't want to think you are using the JAR in core when you are actually using your local :weary:
@@ -61,5 +61,5 @@ git checkout 214
 In the `workspace-user.xml` _for the 214 branch_, reference the correct release JAR:
 
 ```xml
-<talon-runtime.version>214-SNAPSHOT</talon-runtime.version>
+<webruntime-framework.version>214-SNAPSHOT</webruntime-framework.version>
 ```
