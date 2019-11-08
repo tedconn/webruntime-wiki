@@ -66,7 +66,7 @@ A theme layouts is a view which typically defines a header and a footer, plus a 
 
 ```json
 {
-    "name": "My Theme",
+    "name": "my-theme",
     "branding": "branding.json",
     "themeLayouts": {
         "default": {
@@ -141,7 +141,7 @@ In our home view, we will point to the home component and use the default theme 
 
 ```json
 {
-    "name": "defaultThemeLayout",
+    "name": "headerAndFooter",
     "component": {
         "name": "app/headerAndFooter"
     }
