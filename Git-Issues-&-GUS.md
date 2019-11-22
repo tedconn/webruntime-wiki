@@ -13,7 +13,7 @@ The motivation of this Git issue triaging process is to account for all work on 
 A Git issue is considered triaged once it has the appropriate `Gus:XXX` git label(s) and has the associated work item number in the title. If the number is missing, that implies a work item has yet to be created for it.
 
 ### 1. Labels
-Depending on if the issue will result in a user story or bug, add the `GUS:story` or `GUS:bug` label, respectively. If it is unclear what the work is, add the `investigate` label.
+Depending on if the issue will result in a user story or bug, add the `GUS:story` or `GUS:bug` [label](https://git.soma.salesforce.com/communities/webruntime/labels), respectively. If it is unclear what the work is, add the `investigate` label.
 
 If known, add the label for the release number of the expected Scheduled Build (e.g. `226`). Otherwise, the Scheduled Build will be considered "Backlog".
 
