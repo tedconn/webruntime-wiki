@@ -6,6 +6,7 @@ For information on how to setup your environment for internal access, see these 
 
 - [Internal NPM Access](https://git.soma.salesforce.com/communities/webruntime/wiki/Internal-NPM-Access)
 - [Github Enterprise](https://git.soma.salesforce.com/communities/webruntime/wiki/Github-Enterprise)
+- [Triaging Git Issues](https://git.soma.salesforce.com/communities/webruntime/wiki/Git-Issues-&-GUS)
 - [SFCI / Jenkins](https://git.soma.salesforce.com/communities/webruntime/wiki/SFCI---Jenkins)
 - [Configure Eclipse](https://git.soma.salesforce.com/communities/webruntime/wiki/Configure-Eclipse)
 - [Configure Core](https://git.soma.salesforce.com/communities/webruntime/wiki/Configure-Core)
