@@ -1,10 +1,10 @@
 ## TL;DR;
 
-1. Find out your JAR's version number in [Nexus](https://nexus.soma.salesforce.com/nexus/#nexus-search;quick~talon-runtime).
+1. Find out your JAR's version number in [Nexus](https://nexus.soma.salesforce.com/nexus/#nexus-search;quick~webruntime-framework).
 1. Open `~/blt/app/main/core/pom.xml`
 1. Please update the following line with the version from step 1.
     ```xml
-    <talon-runtime.version>224.#</talon-runtime.version>
+    <webruntime-framework.version>224.#</webruntime-framework.version>
     ```
 1. Comment out the [changes you made when configuring your app](ConfigureCore.md)
 1. Add `pom.xml` to your P4 changelist alongside any Core changes you might have.
@@ -18,12 +18,12 @@ When one of your builds fails, this is a great place to go in order to discover 
 
 ## Nexus
 
-As soon as your pull request is merged into master, an SFCI build will run. If successful, it will place a new talon-runtime jar in Nexus. Please go [here to find your Nexus jar](https://nexus.soma.salesforce.com/nexus/#nexus-search;quick~talon-runtime). Each jar represents one successfully merged release branch.
+As soon as your pull request is merged into master, an SFCI build will run. If successful, it will place a new webruntime-framework jar in Nexus. Please go [here to find your Nexus jar](https://nexus.soma.salesforce.com/nexus/#nexus-search;quick~webruntime-framework). Each jar represents one successfully merged release branch.
 
-If you want to see which JAR is yours, you can go to the [Github Repo](https://git.soma.salesforce.com/communities/talon) and select the Release tab.
+If you want to see which JAR is yours, you can go to the [Github Repo](https://git.soma.salesforce.com/communities/webruntime) and select the Release tab.
 ![Releases tab](https://help.github.com/assets/images/help/releases/release-link.png)
 
-These `sfci-224.#` releases represent each jar in Nexus. If you select one and check the latest commit then you'll see who was the contributor.
+These `sfci-226.#` releases represent each jar in Nexus. If you select one and check the latest commit then you'll see who was the contributor.
 
 ## Working in Core with the Nexus Jar
 
@@ -33,7 +33,7 @@ To now consume your new jar, we will need to update `~/blt/app/main/core/pom.xml
 
 1. Please then update the following line with that version number.
     ```xml
-    <talon-runtime.version>224.#</talon-runtime.version>
+    <webruntime-framework.version>224.#</webruntime-framework.version>
     ```
 1. Next please run `blt --build update-repository-filter` to generate a new `artifacts.xml` file.
 1. Add both of these files to your P4 changelist alongside any Core changes you might have.
