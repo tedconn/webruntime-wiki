@@ -152,7 +152,9 @@ Notice that a theme layout view also points to a component except it does not ne
 
 ### Components
 
-Our final step is to create the LWC components that power our application. These components are usually placed in `src/modules` so we will do the same! But before creating the components, we need our application to specify where our components live. The LWC convention for doing this is adding an `lwc.config.json` to our package root (adjacent to the `package.json`):
+Our final step is to create the LWC components that power our application. These components are usually placed in `src/modules` so we will do the same! 
+
+But before creating the components, we need our application to specify where our components live. The LWC convention for doing this is adding an `lwc.config.json` to our package root (adjacent to the `package.json`):
 
 **lwc.config.json**
 
