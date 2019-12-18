@@ -127,7 +127,7 @@ Module specified in this mapping will be treated as external and read from the g
 
 This property is similar to [Rollup's](https://rollupjs.org/guide/en#core-functionality) `output.globals` option.
 
-#### rollup.plugins
+### rollup.plugins
 
 An array of rollup plugins that will be resolved by `require`.
 
